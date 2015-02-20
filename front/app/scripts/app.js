@@ -14,7 +14,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'angularCharts'
+    'angularCharts',
+    'chart.js'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -25,6 +26,14 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/map', {
+        templateUrl: 'views/map.html',
+        controller: 'MapCtrl'
+      })
+      .when('/tech', {
+        templateUrl: 'views/technology.html',
+        contoller: 'TechnologyCtrl'
       })
       .otherwise({
         redirectTo: '/'
