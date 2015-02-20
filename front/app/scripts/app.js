@@ -13,7 +13,8 @@ angular
     'ngAnimate',
     'ngResource',
     'ngRoute',
-    'ngSanitize'
+    'ngSanitize',
+    'angularCharts'
   ])
   .config(function ($routeProvider) {
     $routeProvider
