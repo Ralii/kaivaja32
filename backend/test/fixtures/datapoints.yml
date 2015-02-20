@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  domain: MyString
+  time: 2015-02-21 00:06:23
+  delay: 
+
+two:
+  domain: MyString
+  time: 2015-02-21 00:06:23
+  delay: 
