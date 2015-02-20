@@ -24,4 +24,15 @@ angular.module('hackathonApp')
     $scope.onClick = function (points, evt) {
       console.log(points, evt);
     };
+
+    $scope.janna = [
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"}
+    ]
+
   });

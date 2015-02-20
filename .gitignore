@@ -3,3 +3,10 @@
 /front/.tmp
 /front/.sass-cache
 /front/bower_components
+/scraper/node_modules
+/mobile/.DS_Store
+/mobile/dist
+/mobile/node_modules
+/mobile/bower_components
+/mobile/.sass-cache/
+/mobile/logs/

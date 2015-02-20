@@ -35,6 +35,10 @@ angular
         templateUrl: 'views/technology.html',
         contoller: 'TechnologyCtrl'
       })
+      .when('/moi', {
+        templateUrl: 'views/moi.html',
+        controller: 'MoiCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
