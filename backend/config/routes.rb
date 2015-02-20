@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :domains, except: [:new, :edit]
+  resources :datapoints, except: [:new, :edit]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

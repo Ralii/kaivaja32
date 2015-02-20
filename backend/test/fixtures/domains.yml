@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  domain: MyString
+  median: 
+  min: 
+  max: 
+  avg: 
+
+two:
+  domain: MyString
+  median: 
+  min: 
+  max: 
+  avg: 
