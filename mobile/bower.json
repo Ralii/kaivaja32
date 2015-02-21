@@ -1,0 +1,12 @@
+{
+  "name": "mobile2",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "angular": "1.3.x",
+    "supersonic": "1.x",
+    "angular-charts": "~0.2.7",
+    "angular-chart.js": "~0.5.1",
+    "angular-charts": "~0.2.7"
+  }
+}

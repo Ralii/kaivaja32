@@ -15,13 +15,23 @@ angular.module('hackathonApp')
       'Karma'
     ];
 
-    $scope.otsikko = ["January", "February", "March", "April", "May", "June", "July"];
-    $scope.sarja = ['Series A', 'Series B'];
+    $scope.otsikko = ["0-50", "50-100", "100-150", "150-200", "200-250", "250-300", "300+"];
+    $scope.sarja = ['Ping'];
     $scope.tieto = [
-      [65, 59, 80, 81, 56, 55, 40],
-      [28, 48, 40, 19, 86, 27, 90]
+      [65, 59, 80, 81, 56, 55, 40]
     ];
     $scope.onClick = function (points, evt) {
       console.log(points, evt);
     };
+
+    $scope.janna = [
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
+      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"}
+    ]
+
   });

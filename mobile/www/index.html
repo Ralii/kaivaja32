@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title>My Steroids App</title>
+
+  <link rel="stylesheet" href="/components/supersonic/css/supersonic.css">
+  <link rel="stylesheet" href="/stylesheets/application.css">
+  <link rel="import" href="/components/supersonic/components/import.html">
+
+  <script src="http://localhost/cordova.js"></script>
+  <script src="/components/steroids-js/steroids.js"></script>
+  <script src="/components/angular/angular.js"></script>
+  <script src="/components/supersonic/supersonic.js"></script>
+  <script src="/components/webcomponentsjs/webcomponents.js"></script>
+    <script src="components/d3/d3.js"></script>
+    <script src="components/angular-charts/dist/angular-charts.js"></script>
+    <script src="components/Chart.js/Chart.min.js"></script>
+    <script src="components/angular-chart.js/dist/angular-chart.js"></script>
+
+  <script src="/scripts/application.js"></script>
+</head>
+<body ng-app="SteroidsApplication">
+
+<div class="padding" ng-controller="IndexController">
+
+  <super-navbar>
+    <super-navbar-title ng-bind="navbarTitle">
+    </super-navbar-title>
+  </super-navbar>
+
+    <div id="container">
+        <div id="padding">
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" placeholder="Country">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="List of business">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="Company name">
+                </label>
+            </div>
+
+            <div class="col-lg-8">
+                <canvas id="bar" class="chart chart-bar" data="tieto"
+                        labels="otsikko" legend="true" series="sarja"
+                        click="onClick">
+                </canvas>
+            </div>
+
+            <div class="col-lg-4">
+                <ul class="list">
+                    <li class="item" ng-repeat="kentta in janna" >
+                        {{ kentta.nimi }} {{ kentta.ping }} {{ kentta.alue }}
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
