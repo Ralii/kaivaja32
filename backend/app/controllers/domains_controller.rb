@@ -54,6 +54,6 @@ class DomainsController < ApplicationController
     end
 
     def domain_params
-      params.require(:domain).permit(:domain, :median, :min, :max, :avg)
+      params.require(:domain).permit(:name, :median, :min, :max, :avg, :server, :framework)
     end
 end

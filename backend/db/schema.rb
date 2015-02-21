@@ -11,24 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220220651) do
+ActiveRecord::Schema.define(version: 20150221122024) do
 
-  create_table "datapoints", force: :cascade do |t|
-    t.string   "domain"
-    t.datetime "time"
-    t.integer  "delay"
+  create_table "charts", force: :cascade do |t|
+    t.integer  "min"
+    t.integer  "max"
+    t.integer  "count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "domains", force: :cascade do |t|
+  create_table "datapoints", force: :cascade do |t|
     t.string   "domain"
-    t.integer  "median"
-    t.integer  "min"
-    t.integer  "max"
-    t.integer  "avg"
+    t.decimal  "responsetime"
+    t.string   "server"
+    t.string   "framework"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "domains", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "median"
+    t.decimal  "min"
+    t.decimal  "max"
+    t.decimal  "avg"
+    t.string   "server"
+    t.string   "framework"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "widgets", force: :cascade do |t|
+    t.integer  "datapoint_id"
+    t.string   "name"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

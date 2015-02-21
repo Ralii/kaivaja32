@@ -18,9 +18,14 @@ class DatapointsController < ApplicationController
   # POST /datapoints
   # POST /datapoints.json
   def create
-    @datapoint = Datapoint.new(datapoint_params)
+    p = datapoint_params
+    @datapoint = Datapoint.new(p)
+    puts params[:datapoint][:widgets]
+    puts '******'
+    puts p
 
     if @datapoint.save
+      params[:datapoint][:widgets].each { |a| @datapoint.widgets.create(name: a) }
       render json: @datapoint, status: :created, location: @datapoint
     else
       render json: @datapoint.errors, status: :unprocessable_entity
@@ -54,6 +59,6 @@ class DatapointsController < ApplicationController
     end
 
     def datapoint_params
-      params.require(:datapoint).permit(:domain, :time, :delay)
+      params.require(:datapoint).permit(:domain, :responsetime, :server, :framework, :widgets)
     end
 end

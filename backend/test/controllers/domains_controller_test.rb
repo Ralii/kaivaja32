@@ -13,7 +13,7 @@ class DomainsControllerTest < ActionController::TestCase
 
   test "should create domain" do
     assert_difference('Domain.count') do
-      post :create, domain: { avg: @domain.avg, domain: @domain.domain, max: @domain.max, median: @domain.median, min: @domain.min }
+      post :create, domain: { avg: @domain.avg, framework: @domain.framework, max: @domain.max, median: @domain.median, min: @domain.min, name: @domain.name, server: @domain.server }
     end
 
     assert_response 201
@@ -25,7 +25,7 @@ class DomainsControllerTest < ActionController::TestCase
   end
 
   test "should update domain" do
-    put :update, id: @domain, domain: { avg: @domain.avg, domain: @domain.domain, max: @domain.max, median: @domain.median, min: @domain.min }
+    put :update, id: @domain, domain: { avg: @domain.avg, framework: @domain.framework, max: @domain.max, median: @domain.median, min: @domain.min, name: @domain.name, server: @domain.server }
     assert_response 204
   end
 
