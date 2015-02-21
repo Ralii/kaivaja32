@@ -1,48 +1,45 @@
 <div id="container">
 <div id="padding">
-  <div class="col-lg-4 col-xs-12">
+  <div class="col-lg-4">
   <div class="input-group">
     <span class="input-group-addon" id="basic-addon1"></span>
     <input type="text" class="form-control" placeholder="Country" aria-describedby="basic-addon1">
   </div>
   </div>
-  <div class="col-lg-4 col-xs-12">
+  <div class="col-lg-4">
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon1"></span>
       <input type="text" class="form-control" placeholder="Line of business" aria-describedby="basic-addon1">
     </div>
   </div>
-  <div class="col-lg-4 col-xs-12">
+  <div class="col-lg-4">
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon1"></span>
       <input type="text" class="form-control" placeholder="Company name" aria-describedby="basic-addon1">
     </div>
-
   </div>
-  <div class="col-lg-8">
-  <canvas id="bar" class="chart chart-bar" data="tieto"
-          labels="otsikko" legend="true" series="sarja"
-          click="onClick"
-          >
-  </canvas>
+
+  <div id="padding" class="col-lg-8">
+    <canvas id="doughnut" class="chart chart-doughnut" data="data"
+            labels="labels"></canvas>
   </div>
-<div class="col-lg-4">
-  <table class="table" id="bottom">
-    <tr><td><h5>Sivu</h5></td><td><h5>Latenssi</h5></td><td><h5>Maa</h5></td></tr>
-    <tr ng-repeat="kentta in janna">
-      <td>
-        <h5>{{ kentta.nimi }}</h5>
-      </td>
-      <td>
-        <h5>{{ kentta.ping }}</h5>
-      </td>
 
-      <td>
-        <h5>{{ kentta.alue }}</h5>
-      </td>
-    </tr>
-  </table>
-</div>
+  <div class="col-lg-4">
+    <table class="table" id="bottom">
+      <tr><td><h5>Framework</h5></td><td><h5>Prosentuaalinen osuus</h5></td><td><h5></h5></td></tr>
+      <tr ng-repeat="kentta in janna">
+        <td>
+          <h5>{{ kentta.nimi }}</h5>
+        </td>
+        <td>
+          <h5>{{ kentta.ping }}</h5>
+        </td>
 
+        <td>
+          <h5>{{ kentta.alue }}</h5>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
 </div>
