@@ -3,7 +3,7 @@ class CreateDatapoints < ActiveRecord::Migration
     create_table :datapoints do |t|
       t.string :domain
       t.datetime :time
-      t.integer :delay
+      t.int :delay
 
       t.timestamps null: false
     end
