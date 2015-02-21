@@ -25,13 +25,13 @@ angular.module('hackathonApp')
     };
 
     $scope.janna = [
-      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
-      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
-      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
-      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
-      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
-      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"},
-      {"nimi": "Oskarin virma", "ping": 255, "alue": "Pohjois-Korea"}
+      {"nimi": "Oskarin virma", "ping": 50, "alue": "Suomi"},
+      {"nimi": "Nokia Oy", "ping": 100, "alue": "Suomi"},
+      {"nimi": "Konecranes", "ping": 150, "alue": "Suomi"},
+      {"nimi": "Jippii", "ping": 200, "alue": "Suomi"},
+      {"nimi": "Sulake", "ping": 250, "alue": "Suomi"},
+      {"nimi": "Johtocafe", "ping": 300, "alue": "Suomi"},
+      {"nimi": "Kekkosen softa Oy", "ping": 350, "alue": "Suomi"}
     ]
 
   });

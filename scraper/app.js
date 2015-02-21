@@ -1,19 +1,19 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var request = require('request');
-var cheerio = require('cheerio');
-var routes = require('./routes/index');
-var users = require('./routes/users');
 var http = require('http');
+var mongoose = require('mongoose');
+
 var app = express();
 
+var mongourl = process.env.MONGOLAB_URI || 'mongodb://vesirakennus:meensisaan888@ds043190.mongolab.com:43190/avainkivi';
+mongoose.connect(mongourl);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+var db = mongoose.connection;
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -23,15 +23,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
-
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
+
 
 // error handlers
 
@@ -57,25 +50,12 @@ app.use(function(err, req, res, next) {
     });
 });
 
-var options = {
-    host: 'www.iltalehti.fi',
-    path: '/etusivu/'
-};
+var routes = require('./routes')(app,db);
 
+var port = Number(process.env.PORT || 9000);
 
+http.createServer(app).listen(port);
 
-var rekuu = http.request(options, function (res) {
-    res.on('data', function (chunk) {
-        data += chunk;
-    });
-    res.on('end', function () {
-        console.log(data);
-    });
-});
-rekuu.on('error', function (e) {
-    console.log(e.message);
-});
-rekuu.end();
-
+console.log("start!");
 
 module.exports = app;

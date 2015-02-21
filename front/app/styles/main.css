@@ -92,6 +92,7 @@ body {
   #brown {
     background-color: #2C130D !important;
   }
+  .angular-google-map-container { height: 600px; }
 }
 
 @media (min-width: 500px) {

@@ -3,19 +3,19 @@
   <div class="col-lg-4">
   <div class="input-group">
     <span class="input-group-addon" id="basic-addon1"></span>
-    <input type="text" class="form-control" placeholder="Country" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" ng-model="country" placeholder="Country" aria-describedby="basic-addon1">
   </div>
   </div>
   <div class="col-lg-4">
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon1"></span>
-      <input type="text" class="form-control" placeholder="Line of business" aria-describedby="basic-addon1">
+      <input type="text" class="form-control" ng-model="lineOfBusiness" placeholder="Line of business" aria-describedby="basic-addon1">
     </div>
   </div>
   <div class="col-lg-4">
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon1"></span>
-      <input type="text" class="form-control" placeholder="Company name" aria-describedby="basic-addon1">
+      <input type="text" class="form-control" ng-model="companyName" placeholder="Company name" aria-describedby="basic-addon1">
     </div>
   </div>
 
@@ -27,7 +27,7 @@
   <div class="col-lg-4">
     <table class="table" id="bottom">
       <tr><td><h5>Framework</h5></td><td><h5>Prosentuaalinen osuus</h5></td><td><h5></h5></td></tr>
-      <tr ng-repeat="kentta in janna">
+      <tr ng-repeat="kentta in janna | filter: lineOfBusiness | filter: companyName | filter:country ">
         <td>
           {{ kentta.nimi }}
         </td>
@@ -41,5 +41,6 @@
       </tr>
     </table>
   </div>
+
 </div>
 </div>

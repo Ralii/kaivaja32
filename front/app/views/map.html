@@ -3,13 +3,13 @@
   <div class="col-lg-4 col-xs-12">
   <div class="input-group">
     <span class="input-group-addon" id="basic-addon1"></span>
-    <input type="text" class="form-control" placeholder="Country" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" ng-model="region" placeholder="Country" aria-describedby="basic-addon1">
   </div>
   </div>
   <div class="col-lg-4 col-xs-12">
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon1"></span>
-      <input type="text" class="form-control" placeholder="Line of business" aria-describedby="basic-addon1">
+      <input type="text" class="form-control"  placeholder="Line of business" aria-describedby="basic-addon1">
     </div>
   </div>
   <div class="col-lg-4 col-xs-12">
@@ -29,7 +29,7 @@
 <div class="col-lg-4">
   <table class="table" id="bottom">
     <tr><td><h5>Sivu</h5></td><td><h5>Latenssi</h5></td><td><h5>Maa</h5></td></tr>
-    <tr ng-repeat="kentta in janna">
+    <tr ng-repeat="kentta in janna | filter:name | filter:latency | filter:region">
       <td>
         {{ kentta.nimi }}
       </td>
