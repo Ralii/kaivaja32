@@ -15,7 +15,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'angularCharts',
-    'chart.js'
+    'chart.js',
+    'uiGmapgoogle-maps'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -38,6 +39,10 @@ angular
       .when('/widgets', {
         templateUrl: 'views/widgets.html',
         controller: 'WidgetsCtrl'
+      })
+      .when('/wmap', {
+        templateUrl: 'views/wmap.html',
+        controller: 'WmapCtrl'
       })
       .otherwise({
         redirectTo: '/'
