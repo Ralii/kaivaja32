@@ -2,8 +2,9 @@ class CreateDatapoints < ActiveRecord::Migration
   def change
     create_table :datapoints do |t|
       t.string :domain
-      t.datetime :time
-      t.int :delay
+      t.decimal :responsetime
+      t.string :server
+      t.string :framework
 
       t.timestamps null: false
     end

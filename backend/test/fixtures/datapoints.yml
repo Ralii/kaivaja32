@@ -2,10 +2,12 @@
 
 one:
   domain: MyString
-  time: 2015-02-21 11:08:57
-  delay: 
+  responsetime: 9.99
+  server: MyString
+  framework: MyString
 
 two:
   domain: MyString
-  time: 2015-02-21 11:08:57
-  delay: 
+  responsetime: 9.99
+  server: MyString
+  framework: MyString

@@ -13,7 +13,7 @@ class DatapointsControllerTest < ActionController::TestCase
 
   test "should create datapoint" do
     assert_difference('Datapoint.count') do
-      post :create, datapoint: { delay: @datapoint.delay, domain: @datapoint.domain, time: @datapoint.time }
+      post :create, datapoint: { domain: @datapoint.domain, framework: @datapoint.framework, responsetime: @datapoint.responsetime, server: @datapoint.server }
     end
 
     assert_response 201
@@ -25,7 +25,7 @@ class DatapointsControllerTest < ActionController::TestCase
   end
 
   test "should update datapoint" do
-    put :update, id: @datapoint, datapoint: { delay: @datapoint.delay, domain: @datapoint.domain, time: @datapoint.time }
+    put :update, id: @datapoint, datapoint: { domain: @datapoint.domain, framework: @datapoint.framework, responsetime: @datapoint.responsetime, server: @datapoint.server }
     assert_response 204
   end
 
