@@ -20,6 +20,7 @@ module.exports = function(db){
         var moi = "";
         if(latency < 200){
             latencyModel.findOneAndUpdate({upsert:true},function(err,docs){
+
                 console.log(docs[0].onetwo);
                new latencyModel({
                    onetwo: docs[0].onetwo +1
@@ -32,6 +33,7 @@ module.exports = function(db){
 
         } else if(latency > 200 && latency < 300) {
             latencyModel.find(function(err,docs){
+                console.log(docs);
                 new latencyModel({
                     twothree: docs.twothree +1
                 }).save(function(err,docs){
